@@ -32,10 +32,20 @@
             font-size: 1.1em;
             line-height: 1.6;
         }
-        .retry-info {
+        .retry-button {
             margin-top: 30px;
-            font-size: 0.9em;
-            color: #777;
+            padding: 12px 24px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .retry-button:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
@@ -43,9 +53,7 @@
     <div class="container">
         <h1>You are offline</h1>
         <p>It seems you are not connected to the internet. Please check your connection and try again.</p>
-        <div class="retry-info">
-            This is a custom offline screen. Once you are back online, you can refresh the page.
-        </div>
+        <button class="retry-button" onclick="window.location.reload()">Retry</button>
     </div>
 </body>
 </html>
